@@ -43,4 +43,5 @@ class CounterModel extends BaseModel {
       showToast(result);
     }
   }
+
 }
