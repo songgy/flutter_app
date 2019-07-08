@@ -24,6 +24,14 @@ class MineModel extends BaseModel {
     notifyListeners();
   }
 
+  void pop() {
+    if (Navigator.canPop(mContext)) {
+      Navigator.pop(mContext, "我是上一个页面的结果数据");
+    }else{
+      showToast("当前页面不可以返回");
+    }
+  }
+
   void touchAddress() {
     showLoading();
     Future.delayed(Duration(seconds: 2), () {

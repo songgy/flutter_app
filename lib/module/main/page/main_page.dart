@@ -1,10 +1,10 @@
 import 'package:flutter_app/base/base.dart';
-import 'package:flutter_app/module/status/model/status_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_app/module/main/model/main_model.dart';
 
-class StatusPage extends BasePage<StatusModel> {
-  StatusPage(StatusModel mModel) : super(mModel);
+class MainPage extends BasePage<MainModel> {
+  MainPage(MainModel mModel) : super(mModel);
 
   @override
   Widget initBody(BuildContext context) {

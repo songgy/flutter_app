@@ -29,9 +29,9 @@ class CounterModel extends BaseModel {
     notifyListeners();
   }
 
-  void navigator(BuildContext context) {
-    showToast("跳转");
-    Navigator.push(context, CupertinoPageRoute(builder: (b) {
+  void navigator(BuildContext context) async {
+    String result =
+        await Navigator.push(context, CupertinoPageRoute(builder: (b) {
       return ChangeNotifierProvider.value(
         value: MineModel(),
         child: BaseBuilder<MineModel>((model) {
@@ -39,5 +39,8 @@ class CounterModel extends BaseModel {
         }),
       );
     }));
+    if (result != null) {
+      showToast(result);
+    }
   }
 }

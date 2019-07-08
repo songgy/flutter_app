@@ -6,8 +6,8 @@ import 'package:provider/provider.dart';
 
 import 'base/base_resposity.dart';
 import 'model/app_model.dart';
-import 'module/status/model/status_model.dart';
-import 'module/status/page/status_page.dart';
+import 'module/main/model/main_model.dart';
+import 'module/main/page/main_page.dart';
 
 ///浮层对象
 MaskModel maskModel = MaskModel();
@@ -45,9 +45,9 @@ class MyApp extends StatelessWidget {
       ),
 //      home: MyHomePage(title: 'Flutter Demo Home Page'),
       home: ChangeNotifierProvider.value(
-        value: StatusModel(),
-        child: BaseBuilder<StatusModel>((model) {
-          return StatusPage(model);
+        value: MainModel(),
+        child: BaseBuilder<MainModel>((model) {
+          return MainPage(model);
         }),
       ),
     );

@@ -36,9 +36,11 @@ class IncrementPage extends BasePage<CounterModel> {
           ),
           GestureDetector(
             behavior: HitTestBehavior.opaque,
-            child: Text(
-              "自定义点击事件",
-              style: TextStyle(fontSize: 20),
+            child: Center(
+              child: Text(
+                "自定义点击事件",
+                style: TextStyle(fontSize: 20),
+              ),
             ),
             onTap: () {
               mModel.showToast("点击");
@@ -49,7 +51,7 @@ class IncrementPage extends BasePage<CounterModel> {
                 mModel.navigator(context);
               },
               child: Text(
-                "跳转",
+                "跳转到下一页",
                 style: TextStyle(fontSize: 20),
               )),
           Container(

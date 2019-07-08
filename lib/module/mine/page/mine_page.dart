@@ -10,7 +10,10 @@ class MinePage extends BasePage<MineModel> {
 
   @override
   PreferredSizeWidget initAppBar(BuildContext context) {
-    return CusAppBar(title: "个人资料",showLeading: false,);
+    return CusAppBar(
+      title: "个人资料",
+      showLeading: false,
+    );
   }
 
   @override
@@ -90,6 +93,19 @@ class MinePage extends BasePage<MineModel> {
                   child: Text(
                     "共享数据元素：${mModel.appModel == null ? "默认数据" : mModel.appModel.currentNum}",
                     style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                padding: EdgeInsets.symmetric(vertical: 36, horizontal: 18),
+              ),
+              Padding(
+                child: Center(
+                  child: GestureDetector(
+                    child: Text(
+                      "返回结果给上一个页面",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    onTap: mModel.pop,
+                    behavior: HitTestBehavior.opaque,
                   ),
                 ),
                 padding: EdgeInsets.symmetric(vertical: 36, horizontal: 18),
